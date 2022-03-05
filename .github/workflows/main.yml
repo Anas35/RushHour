@@ -16,5 +16,5 @@ jobs:
       - run: flutter pub get
       
       - uses: bluefireteam/flutter-gh-pages@v7
-      with:
+        with:
           baseHref: /rush_hour/
