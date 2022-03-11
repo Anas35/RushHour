@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:rush_hour/page/block_widget.dart';
+import 'package:rush_hour/widgets/common/block_widget.dart';
 import 'package:rush_hour/src/blocks.dart';
 import 'package:rush_hour/src/pattern.dart';
 
@@ -20,18 +20,21 @@ class GridPattern extends StatelessWidget {
         color: Colors.transparent,
         borderRadius: const BorderRadius.all(Radius.circular(18.0))
       ),
-      child: GridView.count(
-        physics: const NeverScrollableScrollPhysics(),
-        shrinkWrap: true,
-        crossAxisCount: 6,
-        children: List.generate(36, (_) => Container(
-            width: size / 6,
-            height: size / 6,
-            margin: const EdgeInsets.all(5),
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(Radius.circular(12.0)),
-              border: Border.all(),
-              color: const Color(0xFF007991),
+      child: ScrollConfiguration(
+        behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+        child: GridView.count(
+          physics: const NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          crossAxisCount: 6,
+          children: List.generate(36, (_) => Container(
+              width: size / 6,
+              height: size / 6,
+              margin: const EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.all(Radius.circular(12.0)),
+                border: Border.all(),
+                color: const Color(0xFF007991),
+              ),
             ),
           ),
         ),

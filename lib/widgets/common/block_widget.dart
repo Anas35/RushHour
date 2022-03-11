@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rush_hour/src/blocks.dart';
 import 'package:rush_hour/src/pattern.dart';
-import 'package:rush_hour/widgets/win_box.dart';
+import 'package:rush_hour/widgets/common/win_box.dart';
 
 
 class Block extends StatefulWidget {
@@ -103,16 +103,16 @@ class _BlockState extends State<Block> with SingleTickerProviderStateMixin {
         fit: BoxFit.fill,
         image: (() {
           if(blocks.isTwoBlock) {
-            return widget.letter == 'A' ? const AssetImage('images/m.png') : const AssetImage('images/blue_car.png');
+            return widget.letter == 'A' ? const AssetImage('images/m.png') : const AssetImage('images/b_hori.png');
           } else {
-            return const AssetImage('images/big_horizontal_car.png');
+            return const AssetImage('images/t_hori.png');
           }
         }())
       );
     } else {
       return DecorationImage(
-        fit: BoxFit.fitHeight,
-        image: blocks.isTwoBlock ? const AssetImage('images/blue_vertical_car.png') : const AssetImage('images/big_vertical_car.png')
+        fit: BoxFit.fill,
+        image: blocks.isTwoBlock ? const AssetImage('images/b_verti.png') : const AssetImage('images/t_verti.png')
       );
     }
   }

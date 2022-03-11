@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:rush_hour/page/landscape_view.dart';
-import 'package:rush_hour/page/potrait_view.dart';
+import 'package:rush_hour/widgets/landscape/landscape_view.dart';
+import 'package:rush_hour/widgets/potrait/potrait_view.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));

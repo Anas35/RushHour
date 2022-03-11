@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rush_hour/src/config.dart';
-import 'package:rush_hour/page/moves.dart';
-import 'package:rush_hour/page/time.dart';
+import 'package:rush_hour/widgets/common/moves.dart';
+import 'package:rush_hour/widgets/common/time.dart';
 
 class RPattern extends StateNotifier<Map<String, List<int>>> {
 

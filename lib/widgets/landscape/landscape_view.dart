@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rush_hour/widgets/game_box.dart';
-import 'package:rush_hour/page/moves.dart';
-import 'package:rush_hour/widgets/re_button.dart';
-import 'package:rush_hour/page/time.dart';
-import 'package:rush_hour/widgets/shadow_container.dart';
+import 'package:rush_hour/widgets/common/game_box.dart';
+import 'package:rush_hour/widgets/common/moves.dart';
+import 'package:rush_hour/widgets/landscape/re_button.dart';
+import 'package:rush_hour/widgets/common/time.dart';
+import 'package:rush_hour/widgets/landscape/shadow_container.dart';
 
 class LandscapeView extends StatelessWidget {
   const LandscapeView({Key? key}) : super(key: key);
