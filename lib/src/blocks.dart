@@ -1,4 +1,4 @@
-import 'package:rush_hour/src/pair.dart';
+typedef Pair = ({double first, double last});
 
 class Blocks {
 
@@ -11,13 +11,16 @@ class Blocks {
 
   bool get isTwoBlock => block.length == 2;
   
-  Pair<double> get getSize {
+  Pair get getSize {
     if (isHorizontalBlock) {
-      return Pair<double>(block.length * size, size);
+      return (first: block.length * size, last: size);
     } else {
-      return Pair<double>(size, block.length * size);
+      return (first: size, last: block.length * size);
     }
   }
 
-  Pair<double> get initialPosition => Pair<double>((block.first % 6) * size, (block.first ~/ 6) * size);
+  Pair get initialPosition => (
+    first: (block.first % 6) * size,
+    last: (block.first ~/ 6) * size,
+  );
 }

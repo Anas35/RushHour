@@ -15,8 +15,8 @@ class ReButton extends ConsumerWidget {
           icon: const Icon(Icons.restore),
           label: const Text('Reset'),
           style: ElevatedButton.styleFrom(
-            fixedSize: const Size(120.0, 45.0),
-            primary: const Color(0xFF0A0A0A).withOpacity(0.50),
+            fixedSize: const Size(120.0, 45.0), 
+            backgroundColor: const Color(0xFF0A0A0A).withOpacity(0.50),
           ),
         ),
         const SizedBox(height: 100),
@@ -25,8 +25,8 @@ class ReButton extends ConsumerWidget {
           icon: const Icon(Icons.shuffle),
           label: const Text('Random'),
           style: ElevatedButton.styleFrom(
-            fixedSize: const Size(120.0, 45.0),
-            primary: const Color(0xFF0A0A0A).withOpacity(0.50),
+            fixedSize: const Size(120.0, 45.0), 
+            backgroundColor: const Color(0xFF0A0A0A).withOpacity(0.50),
           ),
         ),
       ],

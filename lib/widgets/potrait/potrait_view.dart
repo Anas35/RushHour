@@ -17,11 +17,11 @@ class PotraitView extends StatelessWidget {
         backgroundColor: const Color(0xFF007991),
         elevation: 8.0,
       ),
-      body: Center(
+      body: const Center(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Column(
-            children: const [
+            children: [
               Flexible(flex: 1, child: HeaderChild()),
               Expanded(flex: 4, child: Center(child: GameBox())),
             ],

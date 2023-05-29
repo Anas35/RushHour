@@ -30,8 +30,8 @@ class WinBox extends ConsumerWidget {
                     children: [
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          fixedSize: const Size(75.0, 75.0),
-                          primary: const Color(0xFFBF0000),
+                          fixedSize: const Size(75.0, 75.0), 
+                          backgroundColor: const Color(0xFFBF0000),
                           padding: const EdgeInsets.all(0.0)
                         ),
                         child: const Icon(Icons.restore, size: 36.0), 
@@ -42,8 +42,8 @@ class WinBox extends ConsumerWidget {
                       ),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          fixedSize: const Size(75.0, 75.0),
-                          primary: const Color(0xFFBF0000),
+                          fixedSize: const Size(75.0, 75.0), 
+                          backgroundColor: const Color(0xFFBF0000),
                           padding: const EdgeInsets.all(0.0)
                         ),
                         child: const Icon(Icons.shuffle, size: 36.0), 
@@ -69,7 +69,7 @@ class CustomBox extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     
-  final Paint _paint1Fill = Paint()
+  final Paint paint1Fill = Paint()
     ..shader = ui.Gradient.linear(
         Offset(size.width, size.height * 0.5),
         Offset(0.0, size.height),
@@ -80,7 +80,7 @@ class CustomBox extends CustomPainter {
      )
     ..style = PaintingStyle.fill;
     
-  final Paint _paint2Fill = Paint()
+  final Paint paint2Fill = Paint()
     ..color = const Color(0xFFBF0000)
     ..style = PaintingStyle.fill;
     
@@ -122,8 +122,8 @@ class CustomBox extends CustomPainter {
       maxWidth: size.width,
     );
     
-    canvas.drawPath(path1, _paint1Fill);
-    canvas.drawPath(path2, _paint2Fill);
+    canvas.drawPath(path1, paint1Fill);
+    canvas.drawPath(path2, paint2Fill);
     textPainter.paint(canvas, Offset(size.width * 0.25, size.height * 0.25));
     
   }

@@ -27,7 +27,7 @@ class _TimeState extends ConsumerState<Time> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       Timer.periodic(const Duration(seconds: 1), (_) { 
         if(mounted) {
           ref.watch(TimeState.timeProvider.notifier).increment();
@@ -65,7 +65,7 @@ class _TimeState extends ConsumerState<Time> {
             builder: (context, ref, _) {
               final int value = ref.watch(TimeState.timeProvider);
               String sec = seconds(value), min = minutes(value);
-              return Text(min + ':' + sec, style: const TextStyle(fontSize: 32.0, color: Colors.white));
+              return Text('$min:$sec', style: const TextStyle(fontSize: 32.0, color: Colors.white));
             }
           ),
           const Text('minutes', style: TextStyle(fontSize: 16.0, color: Colors.white, fontWeight: FontWeight.bold)),

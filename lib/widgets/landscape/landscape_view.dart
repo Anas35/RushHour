@@ -19,8 +19,8 @@ class LandscapeView extends StatelessWidget {
         backgroundColor: const Color(0xFF007991),
         elevation: 8.0,
       ),
-      body: SingleChildScrollView(
-        physics: const ClampingScrollPhysics(),
+      body: const SingleChildScrollView(
+        physics: ClampingScrollPhysics(),
         child: SizedBox(
           height: 500,
           child: Center(
@@ -28,22 +28,22 @@ class LandscapeView extends StatelessWidget {
                 width: 750.0,
                 height: 750.0,
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(16.0),
                   child: Row(
                     children: [
                       Expanded(
                         flex: 2,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
+                          children: [
                             ShadowContainer(child: Moves()),
                             SizedBox(width: 100, height: 100),
                             ShadowContainer(child: Time())
                           ],
                         ),
                       ),
-                      const Expanded(flex: 5, child: GameBox()),
-                      const Expanded(flex: 2, child: ReButton()),
+                      Expanded(flex: 5, child: GameBox()),
+                      Expanded(flex: 2, child: ReButton()),
                     ],
                   ),
                 )),

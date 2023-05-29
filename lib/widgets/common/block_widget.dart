@@ -50,7 +50,7 @@ class _BlockState extends State<Block> with SingleTickerProviderStateMixin {
 
   void updatePan(DragUpdateDetails details, RPattern rPattern) {
     Offset offset = details.delta;
-    List<double> limit = rPattern.limitedPosition(widget.letter, widget.blocks.size);
+    Pair limit = rPattern.limitedPosition(widget.letter, widget.blocks.size);
 
     setState(() {
       if (blocks.isHorizontalBlock) {

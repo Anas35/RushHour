@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:rush_hour/src/blocks.dart';
 import 'package:rush_hour/src/config.dart';
 import 'package:rush_hour/widgets/common/moves.dart';
 import 'package:rush_hour/widgets/common/time.dart';
@@ -81,7 +82,7 @@ class RPattern extends StateNotifier<Map<String, List<int>>> {
     return currentBlock;
   }
 
-  List<double> limitedPosition(String char, double size) {
+  Pair limitedPosition(String char, double size) {
 
     List<int> block = state[char] ?? [];
 
@@ -108,7 +109,7 @@ class RPattern extends StateNotifier<Map<String, List<int>>> {
         }        
       }
 
-      return [first, second];
+      return (first: first, last: second);
     } else {
 
       for (int i = 0 + (block.first % 6); i < block.first; i+=6) {
@@ -123,7 +124,7 @@ class RPattern extends StateNotifier<Map<String, List<int>>> {
          }    
       }
       
-      return [first, second];
+      return (first: first, last: second);
     }
   }
 
